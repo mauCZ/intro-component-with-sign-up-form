@@ -64,7 +64,7 @@ main #phrase p {
 
 main #info-submit #trial {
   color: white;
-  padding: 1em 0;
+  padding: 1em .5em;
   width: 100%;
   border-radius: .5em;
   font-size: 16px;
@@ -75,6 +75,26 @@ main #info-submit #trial {
   margin-bottom: 1.5em;
   -webkit-box-shadow: 0 8px 4px rgba(62, 60, 73, 0.3);
           box-shadow: 0 8px 4px rgba(62, 60, 73, 0.3);
+}
+
+main #info-submit ::-webkit-input-placeholder {
+  color: #3e3c49;
+  font-weight: 700;
+}
+
+main #info-submit :-ms-input-placeholder {
+  color: #3e3c49;
+  font-weight: 700;
+}
+
+main #info-submit ::-ms-input-placeholder {
+  color: #3e3c49;
+  font-weight: 700;
+}
+
+main #info-submit ::placeholder {
+  color: #3e3c49;
+  font-weight: 700;
 }
 
 main #info-submit form {
@@ -96,6 +116,7 @@ main #info-submit form input {
 
 main #info-submit form input[type='submit'] {
   display: block;
+  padding: 0;
   background-color: #38cc8c;
   color: white;
   font-weight: 700;
@@ -119,7 +140,8 @@ main section {
 
 @media screen and (max-width: 750px) {
   main {
-    margin: 0 30px;
+    max-width: 600px;
+    margin: 0 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -127,9 +149,22 @@ main section {
   }
   main #phrase {
     text-align: center;
+    margin-bottom: 20px;
+  }
+  main #phrase h1 {
+    font-size: 2rem;
+    padding-bottom: .4em;
+  }
+  main #info-submit #trial {
+    font-size: 1.3rem;
   }
   main #info-submit input {
     padding: 1.5em;
+  }
+  main #info-submit input[type='submit'] {
+    font-weight: 300;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -45,7 +45,7 @@ main{
     #info-submit{
         #trial{
             color: white;
-            padding: 1em 0;
+            padding: 1em .5em;
             width: 100%;
             border-radius: .5em;
             font-size: 16px;
@@ -55,6 +55,10 @@ main{
             background-color: $blue;
             margin-bottom: 1.5em;
             box-shadow: 0 8px 4px $dark-blue;
+        }
+        ::placeholder{
+            color:hsl(249, 10%, 26%);
+            font-weight: 700;
         }
         form{
             background-color: white;
@@ -71,6 +75,7 @@ main{
             }
             input[type='submit']{
                 display: block;
+                padding: 0;
                 background-color: $green;
                 color: white;
                 font-weight: 700;
@@ -94,14 +99,29 @@ main{
 }
 @media screen and (max-width: 750px){
     main{
-        margin: 0 30px;
+        max-width: 600px;
+        margin: 0 10px;
         flex-direction: column;
         #phrase{
+            h1{
+                font-size: 2rem;
+                padding-bottom: .4em;
+            }
             text-align: center;
+            margin-bottom: 20px;
         }
         #info-submit{
+
+            #trial{
+                font-size: 1.3rem;
+            }
             input{
                 padding: 1.5em;
+            }
+            input[type='submit']{
+                font-weight: 300; 
+                padding-left: 15px;
+                padding-right: 15px;
             }
         }
     }
