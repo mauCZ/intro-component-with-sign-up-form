@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+$red        :   hsl(0, 100%, 74%);
+$green      :   hsl(154, 59%, 51%);
+$blue       :   hsl(248, 32%, 49%);
+$dark-blue  :   hsla(249, 10%, 26%,.3);
+$grayish-blue:  hsl(246, 25%, 77%);
+$font-fam   :   'Poppins', sans-serif;
+html{
+    font-size: 16px;
+}
+body{
+    min-height: 100vh;
+    background-image: url(../images/bg-intro-desktop.png);
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    // border: 1px solid white;
+    margin: 0 60px;
+    font-family: $font-fam;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    #phrase{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            font-size: 3rem;
+            line-height: 2.8rem;
+            font-weight: bold;
+            padding-bottom: 1em;
+        }
+        p{
+            font-weight: 700;
+        }
+    }
+    #info-submit{
+        #trial{
+            color: white;
+            padding: 1em 0;
+            width: 100%;
+            border-radius: .5em;
+            font-size: 16px;
+            text-align: center;
+            font-size: .8rem;
+            font-weight: 700;
+            background-color: $blue;
+            margin-bottom: 1.5em;
+            box-shadow: 0 8px 4px $dark-blue;
+        }
+        form{
+            background-color: white;
+            padding: 2em;
+            border-radius: .5em;
+            box-shadow: 0 8px 4px $dark-blue;
+            input{
+                border-radius: .20em;
+                width: 100%;
+                padding-left: 1.5em;
+                height: 2.5em;
+                border: 1px solid $grayish-blue;
+                margin-bottom: 1em;
+            }
+            input[type='submit']{
+                display: block;
+                background-color: $green;
+                color: white;
+                font-weight: 700;
+            }
+        }
+        p{
+            padding: 0;
+            color: $grayish-blue;
+            font-size: .6rem;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $red;
+            }
+        }
+    }
+    section{
+        padding: 1em 1.5em;
+        
+    }
+}
+@media screen and (max-width: 750px){
+    main{
+        margin: 0 30px;
+        flex-direction: column;
+        #phrase{
+            text-align: center;
+        }
+        #info-submit{
+            input{
+                padding: 1.5em;
+            }
+        }
+    }
+}
