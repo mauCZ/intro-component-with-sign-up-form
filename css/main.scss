@@ -28,6 +28,7 @@ main{
     display: flex;
     flex-direction: row;
     #phrase{
+        flex: 1 1 45%;
         color: white;
         display: flex;
         flex-direction: column;
@@ -43,6 +44,7 @@ main{
         }
     }
     #info-submit{
+        flex: 1 1 55%;
         #trial{
             color: white;
             padding: 1em .5em;
@@ -57,7 +59,7 @@ main{
             box-shadow: 0 8px 4px $dark-blue;
         }
         ::placeholder{
-            color:hsl(249, 10%, 26%);
+            color:hsl q(249, 10%, 26%);
             font-weight: 700;
         }
         form{
@@ -65,30 +67,43 @@ main{
             padding: 2em;
             border-radius: .5em;
             box-shadow: 0 8px 4px $dark-blue;
+            display: relative;
             input{
                 border-radius: .20em;
                 width: 100%;
                 padding-left: 1.5em;
                 height: 2.5em;
                 border: 1px solid $grayish-blue;
-                margin-bottom: 1em;
             }
             input[type='submit']{
+                font-size: 1rem;
                 display: block;
                 padding: 0;
                 background-color: $green;
                 color: white;
                 font-weight: 700;
             }
-        }
-        p{
-            padding: 0;
-            color: $grayish-blue;
-            font-size: .6rem;
-            text-align: center;
-            a{
-                text-decoration: none;
+            input + p{
+                height: 1.5em;
+                margin-bottom: 1em;
+                font-style:italic;
+                width: 100%;
+            }
+            .error-message{
+                text-align: right;
                 color: $red;
+                font-weight: bold;
+                // font-size: .8rem;
+            }
+            .terms{
+                padding: 0;
+                color: $grayish-blue;
+                text-align: center;
+                font-size: .7rem;
+                a{
+                    text-decoration: none;
+                    color: $red;
+                }
             }
         }
     }
