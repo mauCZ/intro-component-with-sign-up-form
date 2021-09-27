@@ -9,7 +9,8 @@ function verifyLastName(lastName){
     return lastName.length > 0;
 }
 function verifyEmail(email){
-    return false;
+    let regex = /[0-9a-zA-Z]+@[a-zA-Z]+.(com|net|org)/gi
+    return regex.test(email);
 }
 function verifyPassword(password){
     return password.length > 0;
